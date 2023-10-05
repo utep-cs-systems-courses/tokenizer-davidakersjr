@@ -9,13 +9,23 @@ int space_char(char c);
 /* Return true (non-zero) if c is a non-whitespace 
    character (not tab or space).  
    Zero terminators are not printable (therefore false) */ 
-int non_space_char(char c);
+int non_space_char(char
 /* Returns a pointer to the first character of the next 
    space-separated token in zero-terminated str.  Return a zero pointer if 
    str does not contain any tokens. */
 
 
-char *token_start(char *c);
+char *token_start(char *str){
+  int space =  space_char(*str);
+  int zero = non_space_char(*str);
+  if (space && zero){
+    return (str);
+  }
+  else{
+      char *start = token_start(str++)
+      return (start)      
+      }
+}
 
 /* Returns a pointer terminator char following *token is the reverse of start looking for first space */
 char *token_terminator(char *token);
